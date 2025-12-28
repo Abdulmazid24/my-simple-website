@@ -99,7 +99,7 @@ A modern web browser (Chrome, Firefox, Safari, Edge)
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/my-simple-website.git
+git clone https://github.com/Abdulmazid24/my-simple-website.git
 ```
 
 2. Navigate to the project directory
@@ -171,7 +171,7 @@ This portfolio embraces modern web design principles:
 
 This is a personal portfolio project, but suggestions and feedback are welcome!
 
-1. Fork the project
+1. Fork the project from [https://github.com/Abdulmazid24/my-simple-website](https://github.com/Abdulmazid24/my-simple-website)
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
@@ -183,13 +183,12 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-**Your Name**
+**Abdulmazid**
 
-- Website: [yourwebsite.com](#)
+- Portfolio: [https://abdulmazid-portfolio.vercel.app/](https://abdulmazid-portfolio.vercel.app/)
+- GitHub: [@Abdulmazid24](https://github.com/Abdulmazid24)
+- LinkedIn: [Connect with me](https://linkedin.com/in/yourname)
 - Email: your.email@example.com
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [yourname](https://linkedin.com/in/yourname)
-- Twitter: [@yourhandle](https://twitter.com/yourhandle)
 
 ## 🙏 Acknowledgments
 
