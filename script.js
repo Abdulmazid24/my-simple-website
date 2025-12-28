@@ -3,53 +3,53 @@
 // Interactive Functionality & Animations
 // ============================================
 
-document.addEventListener('DOMContentLoaded', function() {
-  
+document.addEventListener('DOMContentLoaded', function () {
+
   // ============================================
   // NAVIGATION
   // ============================================
   const navbar = document.getElementById('navbar');
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const navLinks = document.getElementById('navLinks');
-  
+
   // Navbar scroll effect
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     if (window.scrollY > 50) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
   });
-  
+
   // Mobile menu toggle
   if (mobileMenuBtn) {
-    mobileMenuBtn.addEventListener('click', function() {
+    mobileMenuBtn.addEventListener('click', function () {
       mobileMenuBtn.classList.toggle('active');
       navLinks.classList.toggle('active');
     });
   }
-  
+
   // Close mobile menu on link click
   const navLinkItems = document.querySelectorAll('.nav-links a');
   navLinkItems.forEach(link => {
-    link.addEventListener('click', function() {
+    link.addEventListener('click', function () {
       mobileMenuBtn.classList.remove('active');
       navLinks.classList.remove('active');
     });
   });
-  
+
   // Active nav link on scroll
   const sections = document.querySelectorAll('section[id]');
-  
+
   function highlightNavigation() {
     const scrollY = window.pageYOffset;
-    
+
     sections.forEach(section => {
       const sectionHeight = section.offsetHeight;
       const sectionTop = section.offsetTop - 100;
       const sectionId = section.getAttribute('id');
       const navLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
-      
+
       if (navLink && scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
         navLink.classList.add('active');
       } else if (navLink) {
@@ -57,14 +57,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-  
+
   window.addEventListener('scroll', highlightNavigation);
-  
+
   // ============================================
   // SCROLL REVEAL ANIMATIONS
   // ============================================
   const revealElements = document.querySelectorAll('.reveal');
-  
+
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -75,19 +75,19 @@ document.addEventListener('DOMContentLoaded', function() {
     threshold: 0.15,
     rootMargin: '0px 0px -50px 0px'
   });
-  
+
   revealElements.forEach(element => {
     revealObserver.observe(element);
   });
-  
+
   // ============================================
   // SMOOTH SCROLL
   // ============================================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
-      
+
       if (target) {
         const offsetTop = target.offsetTop - 80;
         window.scrollTo({
@@ -97,15 +97,48 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
+
   // ============================================
   // INITIAL ANIMATIONS
   // ============================================
   setTimeout(() => {
     const heroContent = document.querySelector('.hero-text');
     const heroStats = document.querySelector('.hero-stats');
-    
+
     if (heroContent) heroContent.classList.add('active');
     if (heroStats) heroStats.classList.add('active');
   }, 100);
+
+  // ============================================
+  // CONTACT FORM
+  // ============================================
+  const contactForm = document.getElementById('contactForm');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Get form data
+      const formData = new FormData(contactForm);
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        subject: formData.get('subject'),
+        message: formData.get('message')
+      };
+
+      // Simple validation
+      if (!data.name || !data.email || !data.message) {
+        alert('Please fill in all required fields');
+        return;
+      }
+
+      // Show success message
+      alert('Thank you for your message! I will get back to you soon.');
+      contactForm.reset();
+
+      // In a real application, you would send this data to a server
+      console.log('Form submitted:', data);
+    });
+  }
 });
