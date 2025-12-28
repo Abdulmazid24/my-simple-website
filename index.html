@@ -4,39 +4,196 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My simple Website</title>
-  <link rel="stylesheet" href="styles/blog.css">
+  
+  <!-- Meta Information -->
+  <meta name="description" content="Professional Portfolio - Full Stack Developer specializing in modern web development with enterprise-grade solutions">
+  <meta name="keywords" content="Full Stack Developer, Web Developer, Portfolio, Modern Design, Enterprise Solutions">
+  <meta name="author" content="Your Name">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Professional Portfolio - Full Stack Developer">
+  <meta property="og:description" content="Showcasing enterprise-grade web development projects with modern design">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Professional Portfolio - Full Stack Developer">
+  <meta name="twitter:description" content="Showcasing enterprise-grade web development projects with modern design">
+  
+  <title>Professional Portfolio - Full Stack Developer</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
 </head>
 
 <body>
-  <div>
-    <h3>My first website</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem corrupti doloribus voluptatem odit aperiam repellat
-      quis quaerat eius maxime qui similique esse nihil rerum, ullam, quos asperiores. Cupiditate ad nemo, repellendus
-      et nihil exercitationem dolorem magni, accusantium doloribus suscipit saepe?
-    </p>
-  </div>
-  <div>
-    <h3>My second blog</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus adipisci ipsam cupiditate debitis veniam
-      aliquid explicabo mollitia pariatur laudantium, rem sint dignissimos iste, nulla est. Libero deserunt quam minima
-      sit?</p>
-  </div>
-  <div>
-    <h3>My third blog</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus adipisci ipsam cupiditate debitis veniam
-      aliquid explicabo mollitia pariatur laudantium, rem sint dignissimos iste, nulla est. Libero deserunt quam minima
-      sit?</p>
-  </div>
-  <div>
-    <h3>how to push incremental code</h3>
-    <ul>
-      <li>git add .</li>
-      <li>git commit -m"add a meaningful commit message</li>
-      <li>git push</li>
-    </ul>
-  </div>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <a href="#home" class="logo">
+          <span class="gradient-text">Portfolio</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-background">
+      <div class="floating-shape shape-1"></div>
+      <div class="floating-shape shape-2"></div>
+      <div class="floating-shape shape-3"></div>
+    </div>
+    
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text reveal">
+          <p class="hero-greeting">Hi there, I'm</p>
+          <h1 class="hero-name">
+            <span class="gradient-text">Full Stack Developer</span>
+          </h1>
+          <p class="hero-tagline">
+            Crafting <span class="gradient-text-accent">enterprise-grade</span> web experiences with modern technologies
+          </p>
+          <p class="hero-description">
+            I specialize in building stunning, scalable web applications that combine beautiful design with robust functionality. 
+            From concept to deployment, I bring ideas to life with code.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+        
+        <div class="hero-stats reveal">
+          <div class="stat-card glass-card">
+            <div class="stat-number gradient-text">3+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-number gradient-text">20+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-number gradient-text">15+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="gradient-text">About Me</span>
+      </h2>
+      
+      <div class="about-content">
+        <div class="about-image reveal">
+          <div class="image-wrapper glass-card">
+            <div class="profile-image">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="profileGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+                <circle cx="100" cy="100" r="80" fill="url(#profileGradient)" opacity="0.2"/>
+                <circle cx="100" cy="70" r="30" fill="url(#profileGradient)"/>
+                <path d="M 60 140 Q 100 120 140 140 L 140 160 Q 100 180 60 160 Z" fill="url(#profileGradient)"/>
+              </svg>
+            </div>
+            <div class="profile-border"></div>
+          </div>
+        </div>
+        
+        <div class="about-text reveal">
+          <div class="glass-card-light">
+            <h3>Passionate Developer & Problem Solver</h3>
+            <p>
+              I'm a dedicated full-stack developer with over 3 years of experience in creating modern, 
+              responsive web applications. My journey in web development started with a simple curiosity 
+              about how websites work, and has evolved into a passion for building exceptional digital experiences.
+            </p>
+            <p>
+              I specialize in combining cutting-edge technologies with timeless design principles to create 
+              applications that are not only visually stunning but also highly functional and user-friendly. 
+              Every project is an opportunity to learn, innovate, and deliver excellence.
+            </p>
+            
+            <div class="journey-timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>Started Learning</h4>
+                  <p>Began my web development journey with HTML, CSS, and JavaScript basics</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>Professional Growth</h4>
+                  <p>Expanded skills to full-stack development, mastering modern frameworks and tools</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>Enterprise Solutions</h4>
+                  <p>Now delivering scalable, enterprise-grade applications for clients worldwide</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="expertise-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">⚡</span>
+                <span>Fast & Optimized</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🎨</span>
+                <span>Modern Design</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">📱</span>
+                <span>Responsive</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🔒</span>
+                <span>Secure & Scalable</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 
 </html>
