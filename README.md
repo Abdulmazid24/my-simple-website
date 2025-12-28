@@ -9,9 +9,21 @@
 
 ### A modern, responsive portfolio website showcasing my journey as a Full Stack Developer
 
-[View Live Demo](#) • [Report Bug](#) • [Request Feature](#)
+[🚀 View Live Demo](https://abdulmazid24.github.io/my-simple-website/) • [Report Bug](https://github.com/Abdulmazid24/my-simple-website/issues) • [Request Feature](https://github.com/Abdulmazid24/my-simple-website/issues)
 
 </div>
+
+---
+
+## 🌐 Live Demo
+
+**Portfolio is live!** Visit: **[https://abdulmazid24.github.io/my-simple-website/](https://abdulmazid24.github.io/my-simple-website/)**
+
+Experience the modern portfolio design with:
+- ✨ Smooth animations and scroll effects
+- 🎨 Glassmorphism and gradient designs
+- 📱 Fully responsive on all devices
+- ⚡ Fast loading and optimized performance
 
 ---
 
